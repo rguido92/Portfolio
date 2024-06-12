@@ -1,0 +1,36 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+    {
+        date: "Actualmente",
+        title: "Bootcamp Fullstack",
+        description:
+            "Proyecto en equipo utilizando Angular, metodologías ágiles,Scrum,desarrollo de servicios backend y desarrollo de interfaces de usuario web.  ",
+        link: "",
+    },
+    {
+        date: "Junio 2024",
+        title: "Final curso 2DAM",
+        description:
+            "Manejo de ficheros,conectores,ORM,BBDD relacionales y no relacionales,nativas XML,programacion de componentes de acceso a datos.Programacion de procesos y servicios, multihilo,programacion de comunicaciones en red.Programacion de dispositivos moviles y multimedia (Kotlin).Desarrollo de interfaces",
+        link: "",
+    },
+    {
+        date: "Diciembre 2023",
+        title: "Udemy curso Laravel ",
+        description: "Modelos,migraciones,rutas y vistas. Gestion de productos  ",
+        link: "",
+    },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+    {
+        EXPERIENCE.map((experience) => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience} />
+            </li>
+        ))
+    }
+</ol>

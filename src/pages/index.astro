@@ -1,0 +1,77 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Header from "../components/Header.astro";
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../icons/LinkedIn.astro";
+import GithubIcon from "../icons/Github.astro";
+
+import CodeIcon from "../icons/Code.astro";
+import SocialPill from "../components/SocialPill.astro";
+import MailIcon from "../icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Briefcase from "../icons/Briefcase.astro";
+import Projects from "../components/Projects.astro";
+
+---
+
+<Layout
+	title="Portfolio de Rodrigo - Desarrollador y programador"
+	description="Disponible para trabajar"
+>
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-32">
+			<img
+				class="rounded-full size-24 mb-4"
+				src="src/images/rguidofoto.jpeg"
+				alt="rguido photo"
+			/>
+			<h1
+				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold justify-center flex-row gap-x-4 pb-6 lg:pb-10"
+			>
+				Bienvenid@s a mi portfolio<a
+					href="https://www.linkedin.com/in/rodrigo-guido92/"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center items-center"
+					><Badge>Disponible para trabajar</Badge>
+				</a>
+			</h1>
+			<h2 class="text-xl lg:text-2xl text-wrap max-[700px]">
+				<span class="text-yellow-200/90">
+					Desarrollador de aplicaciones multiplataforma.</span
+				>
+				<span class="text-blue-200/90">De Vigo, España.</span>
+			</h2>
+			<nav class="flex gap-4 mt-8 flex-wrap">
+				<SocialPill href="https://www.linkedin.com/in/rodrigo-guido92/">
+					<LinkedInIcon class="size-4 lg:size-6" />
+					LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/rguido92">
+					<GithubIcon class="size-4 lg:size-6" />
+					Github
+				</SocialPill>
+				<SocialPill href="mailto:rodrigoguidoarias@gmail.com">
+					<MailIcon class="size-4 lg:size-6" />
+					rodrigoguidoarias@gmail.com
+				</SocialPill>
+			</nav>
+		</SectionContainer>
+		<SectionContainer id="experiencie">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Briefcase class="size-7" />
+				Experiencia laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
+		<SectionContainer id="projects">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<CodeIcon class="size-7" />
+				Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer>
+	</main>
+</Layout>
