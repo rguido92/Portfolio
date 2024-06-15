@@ -29,6 +29,6 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
-        publish_branch: gh-pages  # Nombre de la rama para despliegue
+        publish_branch: master  # Nombre de la rama para despliegue
         cname: rguido92.github.io  # Opcional: configurar un CNAME para el dominio personalizado
 
